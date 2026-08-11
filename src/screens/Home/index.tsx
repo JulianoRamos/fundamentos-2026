@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Platform, } from "react-native";
+import { Platform, ScrollView, } from "react-native";
 import styled from "styled-components/native";
 import { Customer } from "../../components/customer";
 
@@ -10,6 +10,10 @@ export function Home() {
   
   function handleAddCustomer() {
     return console.log("Add customer button pressed");
+  }
+
+  function handleRemoveCustomer() {
+    return console.log("Remove customer button pressed");
   }
   
   return (
@@ -23,10 +27,32 @@ export function Home() {
         <ButtonText>+</ButtonText>
       </AddButton>
 
-      <Customer name="João Silva" />
-      <Customer name="Maria Oliveira" />
-      <Customer name="Carlos Santos" />
-      <Customer name="Ana Costa" />
+      <ScrollView showsVerticalScrollIndicator={false}>
+        <Customer name="João Silva" onRemove={handleRemoveCustomer} />
+        <Customer name="Maria Oliveira" onRemove={handleRemoveCustomer} />
+        <Customer name="Carlos Santos" onRemove={handleRemoveCustomer} />
+        <Customer name="Ana Costa" onRemove={handleRemoveCustomer} />
+        <Customer name="João Silva" onRemove={handleRemoveCustomer} />
+        <Customer name="Maria Oliveira" onRemove={handleRemoveCustomer} />
+        <Customer name="Carlos Santos" onRemove={handleRemoveCustomer} />
+        <Customer name="Ana Costa" onRemove={handleRemoveCustomer} />
+        <Customer name="João Silva" onRemove={handleRemoveCustomer} />
+        <Customer name="Maria Oliveira" onRemove={handleRemoveCustomer} />
+        <Customer name="Carlos Santos" onRemove={handleRemoveCustomer} />
+        <Customer name="Ana Costa" onRemove={handleRemoveCustomer} />
+        <Customer name="João Silva" onRemove={handleRemoveCustomer} />
+        <Customer name="Maria Oliveira" onRemove={handleRemoveCustomer} />
+        <Customer name="Carlos Santos" onRemove={handleRemoveCustomer} />
+        <Customer name="Ana Costa" onRemove={handleRemoveCustomer} />
+        <Customer name="João Silva" onRemove={handleRemoveCustomer} />
+        <Customer name="Maria Oliveira" onRemove={handleRemoveCustomer} />
+        <Customer name="Carlos Santos" onRemove={handleRemoveCustomer} />
+        <Customer name="Ana Costa" onRemove={handleRemoveCustomer} />
+        <Customer name="João Silva" onRemove={handleRemoveCustomer} />
+        <Customer name="Maria Oliveira" onRemove={handleRemoveCustomer} />
+        <Customer name="Carlos Santos" onRemove={handleRemoveCustomer} />
+        <Customer name="Ana Costa" onRemove={handleRemoveCustomer} />
+      </ScrollView>
     </Container>
   );
 }
